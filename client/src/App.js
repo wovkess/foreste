@@ -1,4 +1,4 @@
-import "./App.css";
+import "./styles/App.css";
 import * as React from "react";
 import {
   ChakraProvider,
@@ -34,10 +34,21 @@ function App() {
       color="blackAlpha.700"
       fontWeight="bold"
     >
-      <GridItem pl="2" area={"header"}>
+      <GridItem area={"header"}>
         <Nav />
       </GridItem>
-      <GridItem pl="2" area={"main"}></GridItem>
+      <GridItem mt="70px" area={"main"}>
+        <Flex gap={10}>
+          <CardPage />
+          <CardPage />
+          <CardPage />
+        </Flex>
+        <Flex mt={10} gap={10}>
+          <CardPage />
+          <CardPage />
+          <CardPage />
+        </Flex>
+      </GridItem>
       <GridItem pl="2" area={"footer"}>
         Footer
       </GridItem>
