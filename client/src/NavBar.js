@@ -28,10 +28,18 @@ function Nav() {
             fontWeight="semibold"
             gap={10}
           >
-            <Link outline="none" href="">
+            <Link 
+              className="links"
+              href=""
+            >
               Home
             </Link>
-            <Link href="">Profiles</Link>
+            <Link 
+              className="links"
+              href=""
+            >
+              Profiles
+            </Link>
           </Flex>
           <Box>
             <Button mt="5px" size="md" colorScheme="blackAlpha" float="right">

@@ -1,0 +1,7 @@
+.links{
+    text-decoration: none !important;
+    transition: transform 1s ease;
+}
+.links:hover{
+    scale: 1.02;
+}

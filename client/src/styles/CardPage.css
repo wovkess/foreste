@@ -1,0 +1,25 @@
+.soc_icons{
+    width: 28px;
+    height: 28px;
+}
+.soc_icons:hover{
+    scale: 1.1;
+    transition: 0.4s;
+}
+.lang_icons{
+    object-fit: cover;
+    width: 25px;
+    height: 25px;
+}
+.text_p{
+    display: flex;
+    justify-content: center;
+    color: rgba(44, 44, 44, 0.759);
+}
+.card{
+    display: flex;
+    width: 300px;
+    height: 200px;
+    justify-content: center;
+    flex-wrap: wrap;
+}

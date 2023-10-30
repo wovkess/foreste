@@ -31,19 +31,17 @@ function App() {
       gridTemplateColumns={"150px 1fr"}
       h="200px"
       gap="1"
-      color="blackAlpha.700"
+      color="blackAlpha.800"
       fontWeight="bold"
     >
       <GridItem area={"header"}>
         <Nav />
       </GridItem>
       <GridItem mt="70px" area={"main"}>
-        <Flex gap={10}>
+        <Flex gap={10} flexWrap="wrap">
           <CardPage />
           <CardPage />
           <CardPage />
-        </Flex>
-        <Flex mt={10} gap={10}>
           <CardPage />
           <CardPage />
           <CardPage />
