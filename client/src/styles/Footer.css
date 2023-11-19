@@ -1,0 +1,10 @@
+.footer_links{
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    color: #737780;
+    font-size: small;
+}
+.f-link{
+    text-decoration: none !important;
+}
