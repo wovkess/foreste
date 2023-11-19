@@ -9,7 +9,7 @@ import "../styles/Footer.css";
 
 function Footer(){
     return(
-        <Flex className="footer_links" gap={6}>
+        <Flex className="footer_links" paddingTop={30} gap={6}>
             <Link className="f-link">foreste.&copy; 2023</Link>
             <Link className="f-link">Privacy & Legal</Link>
             <Link className="f-link">News</Link>

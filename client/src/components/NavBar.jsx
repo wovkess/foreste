@@ -18,7 +18,7 @@ function Nav() {
           minWidth='max-content'
         >
           <Box>
-            <Link href="#" textDecoration="none !important"><Heading>foreste.</Heading></Link>
+            <Link href="#" textDecoration="none !important"><Heading>Глеб лох</Heading></Link>
           </Box>
           <Box>
             <Flex
