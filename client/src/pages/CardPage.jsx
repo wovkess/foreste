@@ -15,7 +15,7 @@ import Test_User from '../Images/TestUser.png'
 
 function CardPage() {
   return (
-    <Card maxW="md">
+    <Card boxShadow="rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;" borderRadius="8px" maxW="md">
       <CardBody className="card">
         <Image 
           src={Test_User}
