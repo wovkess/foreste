@@ -11,9 +11,9 @@ import {
 function Nav() {
   const [isSmallerThan600] = useMediaQuery("(max-width: 600px)");
   return (
-      <Box boxShadow="md" borderRadius={4} padding={4} textAlign="center" paddingLeft={16} paddingRight={16}>{isSmallerThan600 ? (
+    <Box>{isSmallerThan600 ? (
+      <Box boxShadow="md" width={500} borderRadius={4} padding={4} textAlign="center">
         <Flex
-          width={300}
           justifyContent="space-between"
           alignItems="center"
         >
@@ -56,7 +56,9 @@ function Nav() {
               </Button>
             </Flex>
           </Box>
-        </Flex>) : (<Flex 
+        </Flex></Box>) :  ( 
+        <Box boxShadow="md"borderRadius={4} padding={4} textAlign="center">
+        <Flex 
           justifyContent="space-between"
           alignItems="center"
           minWidth='max-content'
@@ -99,7 +101,7 @@ function Nav() {
               </Button>
             </Flex>
           </Box>
-        </Flex>)}
+        </Flex></Box>)}
     </Box>
   );
 }
