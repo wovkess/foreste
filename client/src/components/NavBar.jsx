@@ -12,7 +12,7 @@ function Nav() {
   const [isSmallerThan600] = useMediaQuery("(max-width: 600px)");
   return (
     <Box>{isSmallerThan600 ? (
-      <Box boxShadow="md" width={500} borderRadius={4} padding={4} textAlign="center">
+      <Box boxShadow="md" width={400} borderRadius={4} padding={4} textAlign="center">
         <Flex
           justifyContent="space-between"
           alignItems="center"
