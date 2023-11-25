@@ -7,3 +7,9 @@
 .link_icon:hover{
     scale: 1.05;
 }
+@media screen and (max-width: 600px) {
+.link_icon{
+    width: 22px;
+    height: 22px;
+}
+}
