@@ -3,8 +3,12 @@
     align-items: center;
     width: auto;
     color: #737780;
-    font-size: small;
+    transition: color 0.3s ease-in-out;
+    font-size: 12px;
 }
 .f-link{
     text-decoration: none !important;
+}
+.footer_links:hover{
+    color: #3d3e40;
 }

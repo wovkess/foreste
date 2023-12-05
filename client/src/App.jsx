@@ -18,7 +18,7 @@ function App() {
 					templateAreas={`"header"
                       "main"
                       "footer"`}
-					gridTemplateRows={'30px 1fr 10px'}
+					gridTemplateRows={'30px 1fr 20px'}
 					gridTemplateColumns={'1fr'}
 					gap='1'
 					color='blackAlpha.800'
@@ -28,15 +28,19 @@ function App() {
 						<Nav />
 					</GridItem>
 					<GridItem
-						mt='70px'
 						justifySelf='center'
 						className='.main_inf'
 						area={'main'}
 					>
 						<Grid
+							mt="100px"
 							gap={10}
 							className='grid-container'
 						>
+							<CardPage />
+							<CardPage />
+							<CardPage />
+							<CardPage />
 							<CardPage />
 							<CardPage />
 							<CardPage />
@@ -46,10 +50,8 @@ function App() {
 					</GridItem>
 					<GridItem
 						h={50}
-						alignItems='center'
 						placeSelf="center"
 						pt='30px'
-						paddingBottom={30}
 						area={'footer'}
 					>
 						<Footer />
