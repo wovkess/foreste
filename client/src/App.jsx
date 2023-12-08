@@ -3,22 +3,21 @@ import * as React from "react";
 import {
   GridItem,
   Grid} from "@chakra-ui/react";
-import {
-  Box,
-} from "@chakra-ui/react";
+import { Box, useMediaQuery } from '@chakra-ui/react'
 import { Flex } from "@chakra-ui/react";
 import Nav from "./components/NavBar";
 import Footer from "./components/Footer"
 import CardPage from "./pages/CardPage";
 
 function App() {
+	const [isSmallerThan600] = useMediaQuery('(max-width: 600px)')
   return (
 		<Box>
 				<Grid
 					templateAreas={`"header"
                       "main"
                       "footer"`}
-					gridTemplateRows={'30px 1fr 20px'}
+					gridTemplateRows={'65px 1fr 20px'}
 					gridTemplateColumns={'1fr'}
 					gap='1'
 					color='blackAlpha.800'

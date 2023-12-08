@@ -7,11 +7,31 @@
 .link_icon:hover{
     scale: 1.05;
 }
+.header{
+  
+}
+.logo{
+
+}
+.nav{
+
+}
+.icons{
+
+}
 @media screen and (max-width: 600px){
-    .link_icon{
-        width: 22px;
-        height: 22px;
-    }
+	.header{
+		
+	}
+	.logo{
+
+	}
+	.nav{
+		display: none;
+	}
+	.icons{
+		display: none;
+	}
 }
 .btn-nav{
   font-size: 18px !important;

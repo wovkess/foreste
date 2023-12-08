@@ -10,13 +10,14 @@ function Nav() {
 			borderRadius={10}
 			padding='15px 2%'
 			width='100%'
-			position='absolute'
+			position='fixed'
+			height='65px'
+			className="header"
 		>
-			<Link href='#' textDecoration='none !important'>
+			<Link className="logo" href='#' textDecoration='none !important'>
 				<Heading>foreste.</Heading>
 			</Link>
-			<Flex gap={4}>
-				<Button className='btn-nav'>Home</Button>
+			<Flex gap={4} className="nav">
 				<Button className='btn-nav'>Profiles</Button>
 				<Button className='btn-nav'>Products</Button>
 				<Button className='btn-nav'>About</Button>
