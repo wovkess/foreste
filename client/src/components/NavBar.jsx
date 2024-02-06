@@ -1,28 +1,16 @@
 import React from "react";
-import { useEffect, useState } from "react";
 import "../styles/NavBar.css";
-import { Heading, Flex, Link, useMediaQuery, Button } from '@chakra-ui/react'
+import { Heading, Flex, Button } from '@chakra-ui/react'
+import { Link } from "react-router-dom";
+import { AuthRoute } from "../utils/consts";
+import { HomeRoute } from "../utils/consts";
+import colors from "../styles/colors";
 function Nav() {
-  const [isHeaderFixed, setIsHeaderFixed] = useState(false);
-
-  useEffect(() => {
-    // Функция, которая будет вызываться при прокрутке страницы
-    const handleScroll = () => {
-      const sticky = document.getElementById("header").offsetTop;
-
-      // Обновляем состояние в зависимости от положения прокрутки
-      setIsHeaderFixed(window.pageYOffset > sticky);
-    };
-
-    // Добавляем слушатель события прокрутки при монтировании компонента
-    window.addEventListener('scroll', handleScroll);
-
-    // Убираем слушатель события при размонтировании компонента
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+	const colorPallet = colors();
+	const midnight = colorPallet.midnight;
   return (
+	
+	<>
 		<Flex
 			justifyContent='space-between'
 			alignItems='center'
@@ -35,8 +23,16 @@ function Nav() {
 			id='main-head'
 			className='header'
 		>
-			<Link className='logo' href='#' textDecoration='none !important'>
-				<Heading>foreste.</Heading>
+			<Link 
+				className='logo'
+			 	textDecoration='none !important'
+				to={HomeRoute}
+			>
+				<Heading
+					color={midnight}
+				>
+				foreste.
+				</Heading>
 			</Link>
 			<Flex gap={4} className='nav'>
 				<Button className='btn-nav'>Profiles</Button>
@@ -67,7 +63,9 @@ function Nav() {
 						/>
 					</svg>
 				</Link>
-				<Link>
+				<Link
+					to={AuthRoute}
+				>
 					<svg
 						className='link_icon'
 						viewBox='0 0 24 24'
@@ -84,7 +82,9 @@ function Nav() {
 				</Link>
 			</Flex>
 		</Flex>
+		
+	</>
 	)
-  }
+}
 
 export default Nav;
