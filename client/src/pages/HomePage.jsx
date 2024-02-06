@@ -30,7 +30,7 @@ const HomePage = () =>{
                     fontWeight={"bold"}
                     fontSize={"60px"}
                 >
-                    Start the opportunity
+                    Start of opportunity
                 </Text>
                 <Box>
                     <div class="arrow arrow-first"></div>
