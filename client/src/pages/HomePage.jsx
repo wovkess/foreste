@@ -4,6 +4,9 @@ import CardPage from "./CardPage";
 import Footer from "../components/Footer";
 import IntroVideo from "../Images/welcome.mp4"
 import NavHome from "../components/NavHome";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { HomeRoute } from "../utils/consts";
 
 const HomePage = () =>{
     return(

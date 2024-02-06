@@ -10,7 +10,6 @@ import {
   CardFooter,
   Link,
 } from "@chakra-ui/react";
-import "../styles/CardPage.css";
 import Test_User from '../Images/TestUser.png'
 import '../styles/App.css'
 function CardPage() {
