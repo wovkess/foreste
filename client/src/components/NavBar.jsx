@@ -2,19 +2,19 @@ import React from "react";
 import "../styles/NavBar.css";
 import { Heading, Flex, Button } from '@chakra-ui/react'
 import { Link } from "react-router-dom";
-import { AuthRoute } from "../utils/consts";
-import { HomeRoute } from "../utils/consts";
+import { AuthRoute, HomeRoute, ProfilesRoute, ProductsRoute, AboutRoute } from "../utils/consts";
 import colors from "../styles/colors";
-function Nav() {
+
+function MainNav() {
 	const colorPallet = colors();
 	const midnight = colorPallet.midnight;
+    const lightBlue = colorPallet.lightBlue;
   return (
 	
 	<>
 		<Flex
 			justifyContent='space-between'
 			alignItems='center'
-			boxShadow='md'
 			borderRadius={10}
 			padding='15px 3%'
 			width='100%'
@@ -29,15 +29,23 @@ function Nav() {
 				to={HomeRoute}
 			>
 				<Heading
-					color={midnight}
+					color={"#000"}
 				>
 				foreste.
 				</Heading>
 			</Link>
 			<Flex gap={4} className='nav'>
-				<Button className='btn-nav'>Profiles</Button>
-				<Button className='btn-nav'>Products</Button>
-				<Button className='btn-nav'>About</Button>
+				<Button 
+					className='btn-nav'
+				>
+					<Link to={ProfilesRoute}>Profiles</Link>
+				</Button>
+				<Button className='btn-nav'>
+					<Link to={ProductsRoute}>Products</Link>
+				</Button>
+				<Button className='btn-nav'>
+					<Link to={AboutRoute}>About</Link>
+				</Button>
 			</Flex>
 			<Flex
 				placeItems={'center'}
@@ -55,7 +63,7 @@ function Nav() {
 					>
 						<path
 							fill='none'
-							stroke='#000000'
+							stroke='#000'
 							stroke-linecap='round'
 							stroke-linejoin='round'
 							stroke-width='1.5'
@@ -71,7 +79,7 @@ function Nav() {
 						viewBox='0 0 24 24'
 						xmlns='http://www.w3.org/2000/svg'
 					>
-						<g fill='none' stroke='#000000' stroke-width='2'>
+						<g fill='none' stroke='#000' stroke-width='2'>
 							<path
 								stroke-linejoin='round'
 								d='M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z'
@@ -87,4 +95,4 @@ function Nav() {
 	)
 }
 
-export default Nav;
+export default MainNav;

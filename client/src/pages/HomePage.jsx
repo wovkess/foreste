@@ -1,15 +1,17 @@
 import React from "react";
-import { Box, Grid, GridItem, Flex  } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Flex, Button, Text  } from "@chakra-ui/react";
 import CardPage from "./CardPage";
 import Footer from "../components/Footer";
-import Nav from "../components/NavBar";
 import IntroVideo from "../Images/welcome.mp4"
+import NavHome from "../components/NavHome";
 
 const HomePage = () =>{
     return(
-        <Box>
+        <Box
+            
+        >
             <Flex>
-                <Nav />
+                <NavHome />
             </Flex>
             <Flex
                 justify="center"
@@ -18,6 +20,24 @@ const HomePage = () =>{
                 zIndex="-1"
             >
                 <video className="IntroVideo" src={IntroVideo} type="video/mp4" autoPlay muted loop></video>
+                <Text
+                    color="#fff"
+                    zIndex='0'
+                    className="welcome_header"
+                    fontWeight={"bold"}
+                    fontSize={"60px"}
+                >
+                    Start the opportunity
+                </Text>
+                <Box>
+                    <div class="arrow arrow-first"></div>
+                    <div class="arrow arrow-second"></div>
+                </Box>
+            </Flex>
+            <Flex
+                flexWrap={'wrap'}
+                height={'600px'}
+            >
             </Flex>            
         </Box>
     )

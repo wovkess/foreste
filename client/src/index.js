@@ -5,7 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider} from '@chakra-ui/react'
 
-
 const rootElement = document.getElementById('root')
 ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>

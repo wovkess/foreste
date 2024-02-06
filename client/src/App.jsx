@@ -5,7 +5,6 @@ import {
   Grid} from "@chakra-ui/react";
 import { Box, useMediaQuery } from '@chakra-ui/react'
 import { Flex } from "@chakra-ui/react";
-import Nav from "./components/NavBar";
 import Footer from "./components/Footer"
 import CardPage from "./pages/CardPage";
 import AppRouter from "./components/AppRouter";
