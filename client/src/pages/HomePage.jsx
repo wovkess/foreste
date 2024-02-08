@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, GridItem, Flex, Button, Text  } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Flex, Button, Text, Image, Header  } from "@chakra-ui/react";
 import CardPage from "./CardPage";
 import Footer from "../components/Footer";
 import IntroVideo from "../Images/welcome.mp4"
@@ -7,8 +7,12 @@ import NavHome from "../components/NavHome";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { HomeRoute } from "../utils/consts";
+import colors from "../styles/colors";
+import calmHouse from "../Images/calmHouse.jpg" 
 
 const HomePage = () =>{
+    const colorPallete = colors();
+    const darknessGreen = colorPallete.darnessGreen;
     return(
         <Box
             
@@ -39,9 +43,34 @@ const HomePage = () =>{
             </Flex>
             <Flex
                 flexWrap={'wrap'}
-                height={'600px'}
+                height={'200vh'}
+                backgroundColor={darknessGreen}
+                justify={'center'}
             >
-            </Flex>            
+                <Box>
+                    <Text
+                        color={'white'}
+                        fontSize={'50px'}
+                    >Why us?</Text>
+
+                </Box>
+                
+                {/* <Box
+                    
+                    mt={'150px'}
+                    className="photoHouse"
+                >
+                    <Image src={calmHouse} />
+                </Box> */}
+            
+                {/* <Flex
+                    marginTop={'190vh'}
+                >
+                    <Footer />    
+                </Flex> */}
+                
+            </Flex>  
+        
         </Box>
     )
 } 

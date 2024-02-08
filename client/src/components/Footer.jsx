@@ -2,7 +2,6 @@ import React from "react";
 import {
     Flex, 
     Link
-
 } from "@chakra-ui/react"
 import "../styles/Footer.css";
 

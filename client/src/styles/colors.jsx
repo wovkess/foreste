@@ -5,7 +5,8 @@ const colors = () => {
         mediumGreen: "#0C7073",
         lightGreen: "#0F969C",
         lightBlue: "#6DA5C0",
-        darkBlue: "#294D61"
+        darkBlue: "#294D61",
+        darnessGreen: "#0B1D26",
     };
 }
 export default colors;
