@@ -1,3 +1,48 @@
+/* navBar */
+.heading{
+  scale: 1.0;
+  transition: 0.3s scale ease-in-out;
+}
+.heading:hover{
+  scale: 1.1;
+}
+.container-input {
+  position: relative;
+}
+
+.inputSearch {
+  background-color: #fff !important;
+  width: 250px;
+  padding: 7px 8px 7px 50px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  transition: all .2s ease-in-out;
+  outline: none;
+}
+
+.inputGroup{
+  transition: all .2s ease-in-out;
+}
+.inputGroup:hover{
+  scale: 1.03;
+}
+.inputSearch:focus {
+  opacity: 1;
+  width: 400px;
+}
+.searchIcon{
+  opacity: 0.8;
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  margin-top: 12px;
+  margin-left: 15px;
+  transition: all .3s ease-in-out;
+}
+.searchIcon:hover{
+  fill: #0c981a;
+}
 /*card css*/
 .soc_icons{
   width: 28px;

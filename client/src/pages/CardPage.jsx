@@ -25,7 +25,6 @@ function CardPage() {
 					alt='profile_img'
 					borderRadius='full'
 					boxSize='150px'
-					d
 				/>
 				<Stack mt='6' spacing='3'>
 					<Heading fontSize='2xl'>Profile name</Heading>

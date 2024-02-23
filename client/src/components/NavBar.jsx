@@ -1,14 +1,24 @@
 import React from "react";
+import "../styles/App.css";
 import "../styles/NavBar.css";
-import { Heading, Flex, Button } from '@chakra-ui/react'
+import { Heading, Flex, Button} from '@chakra-ui/react'
 import { Link } from "react-router-dom";
 import { AuthRoute, HomeRoute, ProfilesRoute, ProductsRoute, AboutRoute } from "../utils/consts";
 import colors from "../styles/colors";
 
-function MainNav() {
+function NavBar() {
 	const colorPallet = colors();
 	const midnight = colorPallet.midnight;
     const lightBlue = colorPallet.lightBlue;
+	const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+    
+        if (section) {
+        section.scrollIntoView({
+            behavior: 'smooth',
+        });
+        }
+    };
   return (
 	
 	<>
@@ -29,48 +39,32 @@ function MainNav() {
 				to={HomeRoute}
 			>
 				<Heading
-					color={"#000"}
+					color={"#fff"}
+					className="heading"
 				>
 				foreste.
 				</Heading>
 			</Link>
-			<Flex gap={4} className='nav'>
-				<Button 
-					className='btn-nav'
-				>
-					<Link to={ProfilesRoute}>Profiles</Link>
-				</Button>
-				<Button className='btn-nav'>
-					<Link to={ProductsRoute}>Products</Link>
-				</Button>
-				<Button className='btn-nav'>
-					<Link to={AboutRoute}>About</Link>
-				</Button>
-			</Flex>
 			<Flex
 				placeItems={'center'}
 				color='#000'
 				fontSize='18px'
 				fontWeight='semibold'
-				gap={4}
+				gap={5}
 				justifyContent='center'
 			>
-				<Link href=''>
-					<svg
-						className='link_icon'
-						viewBox='0 0 24 24'
-						xmlns='http://www.w3.org/2000/svg'
-					>
-						<path
-							fill='none'
-							stroke='#000'
-							stroke-linecap='round'
-							stroke-linejoin='round'
-							stroke-width='1.5'
-							d='m17 17l4 4M3 11a8 8 0 1 0 16 0a8 8 0 0 0-16 0Z'
-						/>
-					</svg>
-				</Link>
+				<div className="inputGroup">
+					<Link>
+						<svg fill="#000000" className="searchIcon" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+							<path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
+						</svg> 
+					</Link>
+					
+					<input type="text" placeholder="Search" className="inputSearch"></input>
+				</div>
+				<Link className='nav-link' to={ProfilesRoute}>Profiles/></Link>
+				<Link className='nav-link' onClick={() => scrollToSection('products')}>Products/></Link>
+				<Link className='nav-link' onClick={() => scrollToSection('about')}>About/></Link>
 				<Link
 					to={AuthRoute}
 				>
@@ -79,7 +73,7 @@ function MainNav() {
 						viewBox='0 0 24 24'
 						xmlns='http://www.w3.org/2000/svg'
 					>
-						<g fill='none' stroke='#000' stroke-width='2'>
+						<g fill='none' stroke='#fff' stroke-width='2'>
 							<path
 								stroke-linejoin='round'
 								d='M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z'
@@ -95,4 +89,4 @@ function MainNav() {
 	)
 }
 
-export default MainNav;
+export default NavBar;

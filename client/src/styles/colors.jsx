@@ -1,11 +1,10 @@
 const colors = () => {
     return{
-        midnight: "#05161A",
-        darkGreen: "#072E33",
-        mediumGreen: "#0C7073",
-        lightGreen: "#0F969C",
-        lightBlue: "#6DA5C0",
-        darkBlue: "#294D61",
+        midnight: "#0D1F23",
+        darkGreen: "#132#35",
+        mediumGreen: "#2D4A53",
+        lightBlue: "#69818D",
+        cream: "#AFB3B7",
         darnessGreen: "#0B1D26",
     };
 }

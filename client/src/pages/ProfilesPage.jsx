@@ -1,10 +1,14 @@
 import React from "react";
-import { Text, Flex } from "@chakra-ui/react";
-import NavBar from "../components/NavBar";
+import { Text, Flex, Box } from "@chakra-ui/react";
+import NavHome from "../components/NavBar";
+import colors from "../styles/colors";
 const ProfilesPage = () =>{
+    const colorPallet = colors();
+    const midnight = colorPallet.midnight;
     return (
-        <Flex>
-            <NavBar />
+        <Flex width={'100%'} height={'100vh'} backgroundColor={midnight}>
+            <NavHome />
+
         </Flex>
     )
 }

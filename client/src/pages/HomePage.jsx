@@ -3,9 +3,10 @@ import { Box, Grid, GridItem, Flex, Button, Text, Image, Header  } from "@chakra
 import CardPage from "./CardPage";
 import Footer from "../components/Footer";
 import IntroVideo from "../Images/welcome.mp4"
-import NavHome from "../components/NavHome";
+import NavBar from "../components/NavBar";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { useState } from 'react';
 import { HomeRoute } from "../utils/consts";
 import colors from "../styles/colors";
 import calmHouse from "../Images/calmHouse.jpg" 
@@ -13,12 +14,13 @@ import calmHouse from "../Images/calmHouse.jpg"
 const HomePage = () =>{
     const colorPallete = colors();
     const darknessGreen = colorPallete.darnessGreen;
+    const midnight = colorPallete.midnight;
     return(
         <Box
             
         >
             <Flex>
-                <NavHome />
+                <NavBar />
             </Flex>
             <Flex
                 justify="center"
@@ -43,15 +45,20 @@ const HomePage = () =>{
             </Flex>
             <Flex
                 flexWrap={'wrap'}
-                height={'200vh'}
-                backgroundColor={darknessGreen}
+                height={'100vh'}
+                backgroundColor={midnight}
                 justify={'center'}
+                id="about"
             >
-                <Box>
+                <Box
+                    mt={'7%'}
+                >
                     <Text
                         color={'white'}
                         fontSize={'50px'}
-                    >Why us?</Text>
+                    ><code>{`<We develop for developers />`}</code>
+                    
+                    </Text>
 
                 </Box>
                 
@@ -70,7 +77,14 @@ const HomePage = () =>{
                 </Flex> */}
                 
             </Flex>  
-        
+            <Flex
+                flexWrap={'wrap'}
+                height={'100vh'}
+                backgroundColor={midnight}
+                justify={'center'}
+                id="products"
+            >
+            </Flex>
         </Box>
     )
 } 

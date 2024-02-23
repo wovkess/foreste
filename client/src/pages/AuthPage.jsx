@@ -3,7 +3,7 @@ import { Flex, Box, Heading, Input, Button, Text, Link as ChakraLink } from "@ch
 
 import { Link } from "react-router-dom";
 import colors from "../styles/colors";
-import NavSh from "../components/NavBarSh"
+import NavSh from "../components/NavBarShorted"
 import '../styles/App.css'
 import { RegisterRoute } from "../utils/consts";
 
