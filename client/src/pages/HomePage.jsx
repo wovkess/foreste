@@ -10,82 +10,103 @@ import { useState } from 'react';
 import { HomeRoute } from "../utils/consts";
 import colors from "../styles/colors";
 import calmHouse from "../Images/calmHouse.jpg" 
+import Loader from "../components/Loader";
 
 const HomePage = () =>{
+    const [isLoading, setIsLoading] = useState(true);
     const colorPallete = colors();
     const darknessGreen = colorPallete.darnessGreen;
     const midnight = colorPallete.midnight;
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            await new Promise(resolve => setTimeout(resolve, 700));
+            setIsLoading(false);
+          } catch (error) {
+            console.error('Error', error);
+            setIsLoading(false);
+          }
+        };
+        fetchData();
+      }, []);
     return(
-        <Box
-            
-        >
-            <Flex>
-                <NavBar />
-            </Flex>
-            <Flex
-                justify="center"
-                align="center"
-                className="main"
-                zIndex="-1"
+        <>
+            {isLoading ? (
+                <Loader />
+            ) : (
+            <Box
+                
             >
-                <video className="IntroVideo" src={IntroVideo} type="video/mp4" autoPlay muted loop></video>
-                <Text
-                    color="#fff"
-                    zIndex='0'
-                    className="welcome_header"
-                    fontWeight={"bold"}
-                    fontSize={"60px"}
+                <Flex>
+                    <NavBar />
+                </Flex>
+                <Flex
+                    justify="center"
+                    align="center"
+                    className="main"
+                    zIndex="-1"
+                    id="home"
                 >
-                    The start of opportunity
-                </Text>
-                <Box>
-                    <div class="arrow arrow-first"></div>
-                    <div class="arrow arrow-second"></div>
-                </Box>
-            </Flex>
-            <Flex
-                flexWrap={'wrap'}
-                height={'100vh'}
-                backgroundColor={midnight}
-                justify={'center'}
-                id="about"
-            >
-                <Box
-                    mt={'7%'}
-                >
+                    <video className="IntroVideo" src={IntroVideo} type="video/mp4" autoPlay muted loop></video>
                     <Text
-                        color={'white'}
-                        fontSize={'50px'}
-                    ><code>{`<We develop for developers />`}</code>
-                    
+                        color="#fff"
+                        zIndex='0'
+                        className="welcome_header"
+                        fontWeight={"bold"}
+                        fontSize={"60px"}
+                    >
+                        The start of opportunity
                     </Text>
+                    <Box>
+                        <div class="arrow arrow-first"></div>
+                        <div class="arrow arrow-second"></div>
+                    </Box>
+                </Flex>
+                <Flex
+                    flexWrap={'wrap'}
+                    height={'100vh'}
+                    backgroundColor={midnight}
+                    justify={'center'}
+                    id="about"
+                >
+                    <Box
+                        mt={'7%'}
+                    >
+                        <Text
+                            color={'white'}
+                            fontSize={'50px'}
+                        ><code>{`<We develop for developers />`}</code>
+                        
+                        </Text>
 
-                </Box>
-                
-                {/* <Box
+                    </Box>
                     
-                    mt={'150px'}
-                    className="photoHouse"
-                >
-                    <Image src={calmHouse} />
-                </Box> */}
-            
-                {/* <Flex
-                    marginTop={'190vh'}
-                >
-                    <Footer />    
-                </Flex> */}
+                    {/* <Box
+                        
+                        mt={'150px'}
+                        className="photoHouse"
+                    >
+                        <Image src={calmHouse} />
+                    </Box> */}
                 
-            </Flex>  
-            <Flex
-                flexWrap={'wrap'}
-                height={'100vh'}
-                backgroundColor={midnight}
-                justify={'center'}
-                id="products"
-            >
-            </Flex>
-        </Box>
+                    {/* <Flex
+                        marginTop={'190vh'}
+                    >
+                        <Footer />    
+                    </Flex> */}
+                    
+                </Flex>  
+                <Flex
+                    flexWrap={'wrap'}
+                    height={'100vh'}
+                    backgroundColor={midnight}
+                    justify={'center'}
+                    id="products"
+                >
+                </Flex>
+            </Box>
+            )}
+        </>
     )
 } 
 export default HomePage;

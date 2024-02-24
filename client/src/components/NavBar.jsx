@@ -1,24 +1,41 @@
 import React from "react";
 import "../styles/App.css";
 import "../styles/NavBar.css";
-import { Heading, Flex, Button} from '@chakra-ui/react'
+import { Heading, Flex } from '@chakra-ui/react'
 import { Link } from "react-router-dom";
-import { AuthRoute, HomeRoute, ProfilesRoute, ProductsRoute, AboutRoute } from "../utils/consts";
+import { AuthRoute, HomeRoute, ProfilesRoute } from "../utils/consts";
 import colors from "../styles/colors";
-
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 function NavBar() {
 	const colorPallet = colors();
 	const midnight = colorPallet.midnight;
     const lightBlue = colorPallet.lightBlue;
-	const scrollToSection = (sectionId) => {
-        const section = document.getElementById(sectionId);
-    
-        if (section) {
-        section.scrollIntoView({
-            behavior: 'smooth',
-        });
-        }
-    };
+	const location = useLocation();
+	useEffect(() => { // добавление скролла по странице
+		const queryParams = new URLSearchParams(location.search);
+		const scrollToSection = queryParams.get("scrollTo");
+	
+		if (scrollToSection) {
+		  const section = document.getElementById(scrollToSection);
+		  if (section) {
+			section.scrollIntoView({
+			  behavior: 'smooth',
+			});
+		  }
+		}
+	  }, [location.search]);
+	useEffect(() => {
+		const script = document.createElement('script');
+		script.src = 'https://cdn.lordicon.com/lordicon.js';
+		script.async = true;
+		script.defer = true;
+		document.body.appendChild(script);
+	
+		return () => {
+		  document.body.removeChild(script);
+		};
+	  }, []);
   return (
 	
 	<>
@@ -36,7 +53,7 @@ function NavBar() {
 			<Link 
 				className='logo'
 			 	textDecoration='none !important'
-				to={HomeRoute}
+				to={`${HomeRoute}?scrollTo=home`}
 			>
 				<Heading
 					color={"#fff"}
@@ -63,24 +80,18 @@ function NavBar() {
 					<input type="text" placeholder="Search" className="inputSearch"></input>
 				</div>
 				<Link className='nav-link' to={ProfilesRoute}>Profiles/></Link>
-				<Link className='nav-link' onClick={() => scrollToSection('products')}>Products/></Link>
-				<Link className='nav-link' onClick={() => scrollToSection('about')}>About/></Link>
+				<Link className='nav-link' to={`${HomeRoute}?scrollTo=products`}>Products/></Link>
+				<Link className='nav-link' to={`${HomeRoute}?scrollTo=about`}>About/></Link>
 				<Link
 					to={AuthRoute}
+					style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
 				>
-					<svg
-						className='link_icon'
-						viewBox='0 0 24 24'
-						xmlns='http://www.w3.org/2000/svg'
-					>
-						<g fill='none' stroke='#fff' stroke-width='2'>
-							<path
-								stroke-linejoin='round'
-								d='M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z'
-							/>
-							<circle cx='12' cy='7' r='3' />
-						</g>
-					</svg>
+						<lord-icon
+							src="https://cdn.lordicon.com/kthelypq.json"
+							trigger="hover"
+							colors="primary:#ffffff"
+							style={{ width: '30px', height: '30px' }}
+						></lord-icon>
 				</Link>
 			</Flex>
 		</Flex>

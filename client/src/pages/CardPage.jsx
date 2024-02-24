@@ -12,12 +12,16 @@ import {
 } from "@chakra-ui/react";
 import Test_User from '../Images/TestUser.png'
 import '../styles/App.css'
+import colors from "../styles/colors";
+
 function CardPage() {
+	const colorPallete = colors();
+	const { cream } = colorPallete;
   return (
 		<Card
-			boxShadow='12px 12px 59px #acacac,
-                -12px -12px 59px #ffffff;'
-      borderRadius="18px"
+			boxShadow={'rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;'}
+      		borderRadius="18px"
+			backgroundColor={'#E8E8E8'}
 		>
 			<CardBody className='card'>
 				<Image
