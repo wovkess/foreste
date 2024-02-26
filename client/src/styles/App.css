@@ -1,3 +1,66 @@
+/* scroll */
+::-webkit-scrollbar {
+  width: 8px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #42434beb; 
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #4c4d56; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000;
+}
+/* cursor */
+#cursor, #aura {
+  position: absolute;
+  border-radius: 50%;
+  transition: .5s cubic-bezier(.75, -1.27, .3, 2.33) transform, .2s cubic-bezier(.75, -1.27, .3, 2.33) opacity; 
+  user-select: none;
+  pointer-events: none;
+  z-index: 9999;
+  transform: scale(1);
+}
+
+#aura.hidden {
+  transform: scale(.001);
+}
+
+#cursor.hidden {
+  transform: scale(.001);
+}
+
+
+#cursor {
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+}
+
+#aura {
+  width: 22px;
+  height: 22px;
+  border: 1.7px solid #ffffff8d;
+  background-color: transparent;
+  transform: translate(5px, 5px);
+}
+
+#cursor.active {
+  width: 9px;
+  height: 9px;
+  background-color: #ffffffd8;
+}
+#aura.active{
+  border: 1.5px solid #ffffffd6;
+  transform: scale(1.5);
+}
+*{
+  cursor: none;
+}
 /* navBar */
 .heading{
   scale: 1.0;
@@ -43,6 +106,46 @@
 .searchIcon:hover{
   fill: #0c981a;
 }
+
+
+.link_icon{
+  scale: 1.0;
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease-in-out;
+}
+.link_icon:hover{
+  transform: scale(1.1);
+}
+@media screen and (max-width: 600px){
+.header{
+  
+}
+.logo{
+
+}
+.nav{
+  display: none;
+}
+.icons{
+  display: none;
+}
+}
+.nav-link{
+display: inline-block;
+text-wrap: balance;
+margin: 0 10px;
+  font-size: 20px;
+  color: #d9d9d9;
+transition: transform 0.3s ease-in-out;
+font-family: "Nunito", sans-serif;
+}
+.nav-link:hover{
+color: #fff;
+transform: scale(1.1);
+}
+
+
 /*card css*/
 .soc_icons{
   width: 28px;
@@ -70,22 +173,7 @@
   justify-content: center;
   flex-wrap: wrap;
 }
-/*scroll css*/
-::-webkit-scrollbar {
-    width: 8px;
-}
 
-::-webkit-scrollbar-thumb {
-    background-color: #42434beb; 
-    border-radius: 50px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background-color: #42434b; 
-}
-
-::-webkit-scrollbar-track {
-    background-color: transparent; 
-}
 
 /* style for auth/reg forms*/
 .email_input{
@@ -119,7 +207,7 @@
 .input_icon:hover{
   stroke: #0c981a;
 }
-/*homePage css*/
+/* homePage css */
 .main{
   overflow: hidden;
   height: 100vh;
@@ -188,4 +276,24 @@
     height: 800px;
     border: none;
     border-radius: 10px;
+}
+
+/* footer */
+.footer_links{
+  justify-content: center;
+  align-items: center;
+  width: auto;
+
+}
+.f-link{
+  font-family: "Nunito", sans-serif;
+  color: #cdcdcd;
+  transition: color .3s ease-in-out;
+  text-decoration: none;
+  font-size: 14px;
+  scale: 1.0;
+  transition: color .3s ease-in-out;
+}
+.f-link:hover{
+  color: #fff;
 }

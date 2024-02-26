@@ -1,10 +1,10 @@
-import { AuthRoute, HomeRoute, RegisterRoute, ProfilesRoute, ProductsRoute, AboutRoute } from "./utils/consts";
+import { AuthRoute, HomeRoute, RegisterRoute, ProfilesRoute } from "./utils/consts";
 import HomePage from "./pages/HomePage";
 import AuthPage from "./pages/AuthPage";
 import RegisterPage from "./pages/RegisterPage";
 import ProfilesPage from "./pages/ProfilesPage";
-import ProductsPage from "./pages/ProductsPage";
-import AboutPage from "./pages/AboutPage";
+
+
 export const publicRoutes = [
         {
                 path: AuthRoute,
@@ -21,13 +21,5 @@ export const publicRoutes = [
         {
                 path: ProfilesRoute,
                 Element: ProfilesPage
-        },
-        {
-                path: ProductsRoute,
-                Element: ProductsPage
-        },
-        {
-                path: AboutRoute,
-                Element: AboutPage
         },
 ]

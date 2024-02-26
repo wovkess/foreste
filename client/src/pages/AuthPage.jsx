@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import { Flex, Box, Heading, Input, Button, Text, Link as ChakraLink } from "@chakra-ui/react";
-
 import { Link } from "react-router-dom";
 import colors from "../styles/colors";
 import NavSh from "../components/NavBarShorted"
 import '../styles/App.css'
 import { RegisterRoute } from "../utils/consts";
+import Cursor from '../components/Cursor';
+
 
 const  AuthPage = () => {
 	const colorPallete = colors();
-	const midnight = colorPallete.midnight;
-	const mediumGreen = colorPallete.mediumGreen;
-	const lightBlue = colorPallete.lightBlue;
+	const {mediumGreen, midnight, lightBlue, white} = colorPallete;
 	const [password, setPassword] = useState('');
 	const [showPassword, setShowPassword] = useState(false);
 	
@@ -20,12 +19,14 @@ const  AuthPage = () => {
 	};
 	return (
 		<>
+			<Cursor />
 			<NavSh />
 			<Flex
 				justify="center"
 				align="center"
 				height="100vh"
 				width="100vw"
+				bgColor={midnight}
 			>
 				
 				<Box // форма
@@ -34,14 +35,15 @@ const  AuthPage = () => {
 					boxShadow="rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;"
 					borderRadius="8px"
 					textAlign="center"
+					bgColor={'white'}
 				>
 					<Box
 						mt="45px"
 					>
 						<Heading
-							color={midnight}
 							fontSize="35px"
 							fontWeight="650"
+							color={midnight}
 						>
 							Sign in
 						</Heading>
@@ -103,6 +105,7 @@ const  AuthPage = () => {
 						<Text
 							mt="25px"
 							fontSize="15px"
+							color={midnight}
 						>
 							Don't have an account? <ChakraLink
 								color={lightBlue}

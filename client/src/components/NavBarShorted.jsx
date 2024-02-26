@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import "../styles/NavBar.css";
 import { Heading, Flex, Button } from '@chakra-ui/react'
 import { Link } from "react-router-dom";
 import { AuthRoute } from "../utils/consts";
@@ -7,7 +6,7 @@ import { HomeRoute } from "../utils/consts";
 import colors from "../styles/colors";
 const NavSh = () => {
 	const colorPallet = colors();
-	const midnight = colorPallet.midnight;
+	const { midnight, white } = colorPallet;
 	useEffect(() => {
 		const script = document.createElement('script');
 		script.src = 'https://cdn.lordicon.com/lordicon.js';
@@ -38,7 +37,7 @@ const NavSh = () => {
 				to={HomeRoute}
 			>
 				<Heading
-					color={midnight}
+					color={white}
 				>
 				foreste.
 				</Heading>
@@ -52,15 +51,15 @@ const NavSh = () => {
 				justifyContent='center'
 			>
 				<Link
-					to={AuthRoute}
+					to={HomeRoute}
 					style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
 				>
 					<lord-icon
-							src="https://cdn.lordicon.com/kthelypq.json"
-							trigger="hover"
-							colors="#000000"
-							style={{ width: '30px', height: '30px' }}
-						></lord-icon>
+						src="https://cdn.lordicon.com/vduvxizq.json"
+						trigger="hover"
+						colors="primary:#ffffff"
+						style={{ width: '30px', height: '30px' }}
+					></lord-icon>
 				</Link>
 			</Flex>
 		</Flex>

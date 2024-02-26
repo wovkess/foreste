@@ -10,7 +10,7 @@ import {
   CardFooter,
   Link,
 } from "@chakra-ui/react";
-import Test_User from '../Images/TestUser.png'
+import Test_User from '../media/TestUser.png'
 import '../styles/App.css'
 import colors from "../styles/colors";
 

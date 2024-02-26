@@ -1,15 +1,16 @@
 import React from "react";
 import {
     Flex, 
-    Link
 } from "@chakra-ui/react"
-import "../styles/Footer.css";
+
+import { Link } from "react-router-dom";
+import "../styles/App.css"
 
 
 function Footer(){
     return(
-        <Flex className="footer_links" paddingTop={30} gap={6}>
-            <Link className="f-link">foreste.&copy; 2023</Link>
+        <Flex className="footer_links" marginTop={'auto'} gap={6} mb={'30px'}>
+            <Link className="f-link">foreste.&copy; 2024</Link>
             <Link className="f-link">Privacy & Legal</Link>
             <Link className="f-link">News</Link>
             <Link className="f-link">Contacts</Link>

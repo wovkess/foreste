@@ -6,6 +6,7 @@ const colors = () => {
         lightBlue: "#69818D",
         cream: "#AFB3B7",
         darnessGreen: "#0B1D26",
+        white: "#EBEBEB"
     };
 }
 export default colors;

@@ -6,7 +6,7 @@ import CardPage from "./CardPage";
 import { wrap } from "framer-motion";
 import Loader from "../components/Loader";
 import { useState, useEffect } from "react";
-
+import Cursor from "../components/Cursor";
 
 const ProfilesPage = () =>{
     const [isLoading, setIsLoading] = useState(true);
@@ -30,7 +30,9 @@ const ProfilesPage = () =>{
             {isLoading ? (
                 <Loader />
             ) : (
+              
                 <Flex width={'100%'} height={'100vh'} backgroundColor={midnight} justify={'center'}>
+                    <Cursor />
                     <NavHome />
                     <Grid templateColumns='repeat(5, 1fr)' gap={50} mt={'5%'}>
                         <GridItem h='fit-content' w={'fit-content'}><CardPage /></GridItem>

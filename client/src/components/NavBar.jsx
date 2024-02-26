@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/App.css";
-import "../styles/NavBar.css";
 import { Heading, Flex } from '@chakra-ui/react'
 import { Link } from "react-router-dom";
 import { AuthRoute, HomeRoute, ProfilesRoute } from "../utils/consts";
@@ -9,8 +8,7 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 function NavBar() {
 	const colorPallet = colors();
-	const midnight = colorPallet.midnight;
-    const lightBlue = colorPallet.lightBlue;
+	const {midnight, lightBlue } = colorPallet;
 	const location = useLocation();
 	useEffect(() => { // добавление скролла по странице
 		const queryParams = new URLSearchParams(location.search);

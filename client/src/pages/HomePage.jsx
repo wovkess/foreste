@@ -1,16 +1,15 @@
 import React from "react";
-import { Box, Grid, GridItem, Flex, Button, Text, Image, Header  } from "@chakra-ui/react";
-import CardPage from "./CardPage";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import Footer from "../components/Footer";
-import IntroVideo from "../Images/welcome.mp4"
 import NavBar from "../components/NavBar";
-import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from 'react';
-import { HomeRoute } from "../utils/consts";
 import colors from "../styles/colors";
-import calmHouse from "../Images/calmHouse.jpg" 
+import calmHouse from "../media/calmHouse.jpg" 
 import Loader from "../components/Loader";
+import IntroVideo from "../components/IntroVideo";
+import Cursor from "../components/Cursor";
+
 
 const HomePage = () =>{
     const [isLoading, setIsLoading] = useState(true);
@@ -20,10 +19,10 @@ const HomePage = () =>{
     useEffect(() => {
         const fetchData = async () => {
           try {
-            await new Promise(resolve => setTimeout(resolve, 700));
+            await new Promise(resolve => setTimeout(resolve, 1000));
             setIsLoading(false);
           } catch (error) {
-            console.error('Error', error);
+            console.error('Error, not found.', error);
             setIsLoading(false);
           }
         };
@@ -31,12 +30,14 @@ const HomePage = () =>{
       }, []);
     return(
         <>
+            <Cursor />
             {isLoading ? (
                 <Loader />
             ) : (
             <Box
                 
             >
+
                 <Flex>
                     <NavBar />
                 </Flex>
@@ -47,7 +48,8 @@ const HomePage = () =>{
                     zIndex="-1"
                     id="home"
                 >
-                    <video className="IntroVideo" src={IntroVideo} type="video/mp4" autoPlay muted loop></video>
+
+                    <IntroVideo />
                     <Text
                         color="#fff"
                         zIndex='0'
@@ -103,6 +105,7 @@ const HomePage = () =>{
                     justify={'center'}
                     id="products"
                 >
+                    <Footer />
                 </Flex>
             </Box>
             )}
