@@ -11,7 +11,7 @@ const Cursor = () => {
   let posY = 0;
 
   const mouseCoords = (e) => {
-    mouseX = e.clientX;
+    mouseX = e.pageX;
     mouseY = e.pageY;
   };
 

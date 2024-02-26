@@ -21,7 +21,7 @@ const RegisterPage = () => {
 	};
 	return(
 		<>
-		<Cursor />
+
 		<NavSh />
 		<Flex
 			justify="center"
@@ -30,7 +30,7 @@ const RegisterPage = () => {
 			width="100vw"
 			bgColor={midnight}
 		>
-			
+			<Cursor />
 			<Box // форма
 				width="350px"
 				height="450px"

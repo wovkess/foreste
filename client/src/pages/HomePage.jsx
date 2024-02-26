@@ -30,12 +30,13 @@ const HomePage = () =>{
       }, []);
     return(
         <>
-            <Cursor />
+
             {isLoading ? (
                 <Loader />
             ) : (
+            <>
+            <Cursor />
             <Box
-                
             >
 
                 <Flex>
@@ -108,6 +109,7 @@ const HomePage = () =>{
                     <Footer />
                 </Flex>
             </Box>
+            </>
             )}
         </>
     )

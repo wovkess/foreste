@@ -19,7 +19,7 @@ const  AuthPage = () => {
 	};
 	return (
 		<>
-			<Cursor />
+			
 			<NavSh />
 			<Flex
 				justify="center"
@@ -28,7 +28,8 @@ const  AuthPage = () => {
 				width="100vw"
 				bgColor={midnight}
 			>
-				
+				<Cursor />
+
 				<Box // форма
 					width="350px"
 					height="450px"
@@ -121,6 +122,7 @@ const  AuthPage = () => {
 					</Box>
 					
 				</Box>
+				
 			</Flex>
 		</>
 	)
