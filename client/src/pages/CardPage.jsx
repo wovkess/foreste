@@ -13,31 +13,35 @@ import {
 import Test_User from '../media/TestUser.png'
 import '../styles/App.css'
 import colors from "../styles/colors";
-
-function CardPage() {
+import Cursor from "../components/Cursor";
+const CardPage = () => {
 	const colorPallete = colors();
 	const { cream } = colorPallete;
   return (
+	<>
 		<Card
 			boxShadow={'rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;'}
       		borderRadius="18px"
 			backgroundColor={'#E8E8E8'}
+
 		>
-			<CardBody className='card'>
+			<CardBody className='card' id="cursorBlack">
 				<Image
 					src={Test_User}
 					alt='profile_img'
 					borderRadius='full'
 					boxSize='150px'
+					id="cursorBlack"
 				/>
-				<Stack mt='6' spacing='3'>
-					<Heading fontSize='2xl'>Profile name</Heading>
-					<Flex justifyContent='center' gap={2}>
-						<Text>
+				<Stack mt='6' spacing='3' >
+					<Heading fontSize='2xl' id="cursorBlack">Profile name</Heading>
+					<Flex justifyContent='center' gap={2} id="cursorBlack">
+						<Text  id="cursorBlack">
 							<svg
 								className='lang_icons'
 								viewBox='0 0 32 32'
 								xmlns='http://www.w3.org/2000/svg'
+								id="cursorBlack"
 							>
 								<path
 									fill='#fbc02d'
@@ -45,11 +49,12 @@ function CardPage() {
 								/>
 							</svg>
 						</Text>
-						<Text>
+						<Text  id="cursorBlack">
 							<svg
 								className='lang_icons'
 								viewBox='0 0 256 255'
 								xmlns='http://www.w3.org/2000/svg'
+								id="cursorBlack"
 							>
 								<defs>
 									<linearGradient
@@ -83,11 +88,12 @@ function CardPage() {
 								/>
 							</svg>
 						</Text>
-						<Text>
+						<Text id="cursorBlack">
 							<svg
 								className='lang_icons'
 								viewBox='0 0 256 264'
 								xmlns='http://www.w3.org/2000/svg'
+								id="cursorBlack"
 							>
 								<path d='M255.008 158.086c-1.535-4.649-5.556-7.887-10.756-8.664c-2.452-.366-5.26-.21-8.583.475c-5.792 1.195-10.089 1.65-13.225 1.738c11.837-19.985 21.462-42.775 27.003-64.228c8.96-34.689 4.172-50.492-1.423-57.64C233.217 10.847 211.614.683 185.552.372c-13.903-.17-26.108 2.575-32.475 4.549c-5.928-1.046-12.302-1.63-18.99-1.738c-12.537-.2-23.614 2.533-33.079 8.15c-5.24-1.772-13.65-4.27-23.362-5.864c-22.842-3.75-41.252-.828-54.718 8.685C6.622 25.672-.937 45.684.461 73.634c.444 8.874 5.408 35.874 13.224 61.48c4.492 14.718 9.282 26.94 14.237 36.33c7.027 13.315 14.546 21.156 22.987 23.972c4.731 1.576 13.327 2.68 22.368-4.85c1.146 1.388 2.675 2.767 4.704 4.048c2.577 1.625 5.728 2.953 8.875 3.74c11.341 2.835 21.964 2.126 31.027-1.848c.056 1.612.099 3.152.135 4.482c.06 2.157.12 4.272.199 6.25c.537 13.374 1.447 23.773 4.143 31.049c.148.4.347 1.01.557 1.657c1.345 4.118 3.594 11.012 9.316 16.411c5.925 5.593 13.092 7.308 19.656 7.308c3.292 0 6.433-.432 9.188-1.022c9.82-2.105 20.973-5.311 29.041-16.799c7.628-10.86 11.336-27.217 12.007-52.99c.087-.729.167-1.425.244-2.088l.16-1.362l1.797.158l.463.031c10.002.456 22.232-1.665 29.743-5.154c5.935-2.754 24.954-12.795 20.476-26.351' />
 								<path
@@ -105,17 +111,18 @@ function CardPage() {
 							</svg>
 						</Text>
 					</Flex>
-					<Text className='text_p' color='grey.200' fontSize='xl'>
+					<Text className='text_p' color='grey.200' fontSize='xl'  id="cursorBlack">
 						Salary: $450
 					</Text>
 				</Stack>
 			</CardBody>
-			<CardFooter justifyContent='center'>
-				<Link href='https://github.com/wovkess' pr={4}>
+			<CardFooter justifyContent='center'  id="cursorBlack">
+				<Link href='https://github.com/wovkess' pr={4}  id="cursorBlack">
 					<svg
 						className='soc_icons'
 						viewBox='0 0 24 24'
 						xmlns='http://www.w3.org/2000/svg'
+						id="cursorBlack"
 					>
 						<path
 							fill='#000000'
@@ -123,11 +130,12 @@ function CardPage() {
 						/>
 					</svg>
 				</Link>
-				<Link href='https://github.com/wovkess' pr={4}>
+				<Link href='https://github.com/wovkess' pr={4}  id="cursorBlack">
 					<svg
 						className='soc_icons'
 						viewBox='0 0 24 24'
 						xmlns='http://www.w3.org/2000/svg'
+						id="cursorBlack"
 					>
 						<g fill='none' fill-rule='evenodd'>
 							<path d='M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z' />
@@ -138,11 +146,12 @@ function CardPage() {
 						</g>
 					</svg>
 				</Link>
-				<Link href='https://github.com/wovkess'>
+				<Link href='https://github.com/wovkess'  id="cursorBlack">
 					<svg
 						className='soc_icons'
 						viewBox='0 0 24 24'
 						xmlns='http://www.w3.org/2000/svg'
+						id="cursorBlack"
 					>
 						<g
 							fill='none'
@@ -158,6 +167,7 @@ function CardPage() {
 				</Link>
 			</CardFooter>
 		</Card>
+		</>
 	)
 }
 

@@ -14,25 +14,24 @@ const ProfilesPage = () =>{
     const midnight = colorPallet.midnight;
     useEffect(() => {
         const fetchData = async () => {
-          try {
-            await new Promise(resolve => setTimeout(resolve, 2000));
-            setIsLoading(false);
-          } catch (error) {
-            console.error('Error', error);
-            setIsLoading(false);
-          }
+			try {
+				await new Promise(resolve => setTimeout(resolve, 2000));
+				setIsLoading(false);
+			} catch (error) {
+				console.error('Error', error);
+				setIsLoading(false);
+			}
         };
         fetchData();
-      }, []);
+      	}, []);
     
-    return (
-        <>
-            
-            <Cursor />
+    return ( 
+      	<>
             {isLoading ? (
                 <Loader />
             ) : (
-              
+              <>
+                <Cursor />
                 <Flex width={'100%'} height={'100vh'} backgroundColor={midnight} justify={'center'}>
                     
                     <NavHome />
@@ -49,11 +48,9 @@ const ProfilesPage = () =>{
                         <GridItem h='fit-content' w={'fit-content'}><CardPage /></GridItem>
                     </Grid>
                 </Flex>
+              </>
             )}
-            
-                
-
-        </>
+    	</>
     )
 }
 export default ProfilesPage;

@@ -4,7 +4,7 @@ import "../styles/App.css"
 
 const IntroVideo = () => {
     return (
-        <video className="IntroVideo" autoPlay muted loop>
+        <video loading="lazy" className="IntroVideo" autoPlay muted loop preload="none">
             <source src={WelcomeVideo} type="video/mp4" />
         </video>
     )

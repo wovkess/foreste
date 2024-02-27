@@ -55,10 +55,22 @@
   background-color: #ffffffd8;
 }
 #aura.active{
-  border: 1.5px solid #ffffffd6;
-  transform: scale(1.5);
+  border: 2px solid #ffffffd6;
+  transform: scale(1.6);
+}
+#cursor.activeBox{
+  width: 9px;
+  height: 9px;
+  background-color: #000;
+}
+#aura.activeBox{
+  border: 2px solid #000000b6;
+  transform: scale(1.4);
 }
 *{
+  cursor: none;
+}
+button{
   cursor: none;
 }
 /* navBar */
@@ -277,7 +289,15 @@ transform: scale(1.1);
     border: none;
     border-radius: 10px;
 }
-
+.toTop-btn{
+  position: absolute;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  bottom: 50px;
+  right: 50px;
+}
 /* footer */
 .footer_links{
   justify-content: center;

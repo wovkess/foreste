@@ -9,14 +9,20 @@ import calmHouse from "../media/calmHouse.jpg"
 import Loader from "../components/Loader";
 import IntroVideo from "../components/IntroVideo";
 import Cursor from "../components/Cursor";
-
+import ToTopButton from "../components/ToTopButton";
 
 const HomePage = () =>{
     const [isLoading, setIsLoading] = useState(true);
+    const [isScrolled, setIsScrolled] = useState(false);
+
     const colorPallete = colors();
     const darknessGreen = colorPallete.darnessGreen;
     const midnight = colorPallete.midnight;
     useEffect(() => {
+        // const handleScroll = () => {
+        //     setIsScrolled(window.scrollY > 0);
+        // }
+        // window.addEventListener("scroll", handleScroll);
         const fetchData = async () => {
           try {
             await new Promise(resolve => setTimeout(resolve, 1000));
@@ -27,6 +33,9 @@ const HomePage = () =>{
           }
         };
         fetchData();
+        // return () => {
+        //     window.removeEventListener("scroll", handleScroll);
+        // };
       }, []);
     return(
         <>
@@ -107,7 +116,9 @@ const HomePage = () =>{
                     id="products"
                 >
                     <Footer />
+                    <ToTopButton />
                 </Flex>
+
             </Box>
             </>
             )}
