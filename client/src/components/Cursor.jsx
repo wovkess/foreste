@@ -73,7 +73,7 @@ const Cursor = () => {
     document.addEventListener('mouseleave', handleDocumentLeave);
     document.addEventListener('mouseenter', handleDocumentEnter);
 
-    const updateInterval = setInterval(updateCursor, 4);
+    const updateInterval = setInterval(updateCursor, 5);
 
     const buttons = document.querySelectorAll('button');
     const links = document.querySelectorAll('a');

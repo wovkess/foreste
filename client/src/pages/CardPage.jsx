@@ -23,6 +23,8 @@ const CardPage = () => {
 			boxShadow={'rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;'}
       		borderRadius="18px"
 			backgroundColor={'#E8E8E8'}
+			width={'300px'}
+			height={'400px'}
 
 		>
 			<CardBody className='card' id="cursorBlack">

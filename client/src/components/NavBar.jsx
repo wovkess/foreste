@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import "../styles/App.css";
 import { Heading, Flex } from '@chakra-ui/react'
 import { Link } from "react-router-dom";
@@ -10,6 +10,27 @@ function NavBar() {
 	const colorPallet = colors();
 	const {midnight, lightBlue } = colorPallet;
 	const location = useLocation();
+	const [isNavbarVisible, setIsNavbarVisible] = useState(true); // Initial visibility state
+  	const prevScrollY = useRef(0); // Store previous scroll position
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const currentScrollY = window.scrollY;
+			const scrollDirection = currentScrollY > prevScrollY.current ? "down" : "up";
+
+			if (scrollDirection === "down" && currentScrollY > 50) { // Hide on scroll down after 50px 
+				setIsNavbarVisible(false);
+			} else if (scrollDirection === "up" || currentScrollY <= 50) {
+				setIsNavbarVisible(true);
+			}
+
+			prevScrollY.current = currentScrollY;
+		};
+
+		window.addEventListener("scroll", handleScroll);
+
+		return () => window.removeEventListener("scroll", handleScroll); // Cleanup function
+	}, []);
 	useEffect(() => {
 		const scrollToSection = window.location.hash.substring(1);
 	
@@ -22,7 +43,7 @@ function NavBar() {
 		  }
 		}
 	  }, [window.location.hash]);
-	  
+	
 	useEffect(() => {
 		const script = document.createElement('script');
 		script.src = 'https://cdn.lordicon.com/lordicon.js';
@@ -47,6 +68,10 @@ function NavBar() {
 			height='65px'
 			id='main-head'
 			className='header'
+			style={{
+			transition: "opacity .3s ease-in-out", 
+			opacity: isNavbarVisible ? 1 : 0,
+			}}
 		>
 			<Link 
 				className='logo'

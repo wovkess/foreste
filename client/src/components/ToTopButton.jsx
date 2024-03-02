@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "../styles/App.css"
 import Cursor from './Cursor';
-
+import { Link } from '@chakra-ui/react';
 const ToTopButton = () => {
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -28,8 +28,10 @@ const ToTopButton = () => {
 	  }, []);
     return (
         <>
-            <Cursor />
+
             {isScrolled && (
+                <>
+                <Cursor />
                     <lord-icon
                         src="https://cdn.lordicon.com/dwoxxgps.json"
                         trigger="in"
@@ -41,10 +43,10 @@ const ToTopButton = () => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                         }}
                         className="toTop-btn"
-                        id='cursorBlack'
                     ></lord-icon>
+                </>
             )}
-            </>
+        </>
     );
 };
 

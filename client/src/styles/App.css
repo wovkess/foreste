@@ -36,27 +36,30 @@
 
 
 #cursor {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   background-color: #ffffff;
 }
 
 #aura {
-  width: 22px;
-  height: 22px;
-  border: 1.7px solid #ffffff8d;
+  width: 24px;
+  height: 24px;
+  border: 1.2px solid #ffffffc2;
   background-color: transparent;
-  transform: translate(5px, 5px);
+  transform: translate(4.4px, 4.4px);
+  transition: scale .2s ease-in-out;
 }
 
 #cursor.active {
   width: 9px;
   height: 9px;
-  background-color: #ffffffd8;
+  background-color: #9d9fa1;
 }
 #aura.active{
-  border: 2px solid #ffffffd6;
-  transform: scale(1.6);
+  /* border: 1.8px solid #ffffffd6; */
+  border: 1.8px solid #AFB3B7;
+  transform: translate(3px, 3px);
+  scale: 1.8;
 }
 #cursor.activeBox{
   width: 9px;
@@ -64,8 +67,9 @@
   background-color: #000;
 }
 #aura.activeBox{
-  border: 2px solid #000000b6;
-  transform: scale(1.4);
+  border: 1.8px solid #000000b6;
+  transform: translate(4px, 4px);
+  scale: 1.4;
 }
 *{
   cursor: none;
