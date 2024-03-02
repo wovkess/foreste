@@ -88,7 +88,6 @@ const HomePage = () =>{
                             color={'white'}
                             fontSize={'50px'}
                         ><code>{`<We develop for developers />`}</code>
-                            hello
                         </Text>
 
                     </Box>
