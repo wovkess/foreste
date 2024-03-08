@@ -8,12 +8,12 @@ import { RegisterRoute } from "../utils/consts";
 import Cursor from '../components/Cursor';
 
 
+
 const  AuthPage = () => {
 	const colorPallete = colors();
 	const {mediumGreen, midnight, lightBlue, white} = colorPallete;
 	const [password, setPassword] = useState('');
 	const [showPassword, setShowPassword] = useState(false);
-	
 	const togglePasswordVisibility = () => {
 		setShowPassword(!showPassword);
 	};
