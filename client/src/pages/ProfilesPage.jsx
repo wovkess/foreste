@@ -8,7 +8,8 @@ import Loader from "../components/Loader";
 import { useState, useEffect } from "react";
 import Cursor from "../components/Cursor";
 import Footer from "../components/Footer";
-
+import ExchangeConverter from "../components/ExchangeConverter";
+import ProfilesMenu from "../components/ProfilesMenu";
 
 
 const ProfilesPage = () => {

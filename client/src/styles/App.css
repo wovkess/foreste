@@ -79,11 +79,11 @@ button{
 }
 /* navBar */
 .heading{
-  scale: 1.0;
+  scale: 1.1;
   transition: 0.3s scale ease-in-out;
 }
 .heading:hover{
-  scale: 1.1;
+  scale: 1.2;
 }
 .container-input {
   position: relative;
@@ -310,7 +310,7 @@ transform: scale(1.1);
 
 }
 .f-link{
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito", sans-serif; 
   color: #cdcdcd;
   transition: color .3s ease-in-out;
   text-decoration: none;
